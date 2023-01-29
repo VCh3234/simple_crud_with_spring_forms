@@ -1,4 +1,4 @@
-package vlad.data_access_objects;
+package vlad.data_access_objects.dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -16,7 +16,7 @@ public class VehicleDAO implements DAO<VehicleEntity> {
     private SessionFactory sessionFactory;
 
     @Transactional
-    public List<VehicleEntity> getAll() {
+    public List<VehicleEntity> getAllEntities() {
         Session session = sessionFactory.getCurrentSession();
         List<VehicleEntity> result = session.createQuery("from VehicleEntity", VehicleEntity.class).getResultList();
         return result;

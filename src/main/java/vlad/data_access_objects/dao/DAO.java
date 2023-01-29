@@ -1,11 +1,9 @@
-package vlad.data_access_objects;
-
-import vlad.data_access_objects.entities.VehicleEntity;
+package vlad.data_access_objects.dao;
 
 import java.util.List;
 
 public interface DAO<T> {
-    List<T> getAll();
+    List<T> getAllEntities();
 
     void delete(T vehicle);
 
