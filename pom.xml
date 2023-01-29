@@ -4,6 +4,10 @@
   <groupId>vlad</groupId>
   <artifactId>crud-app</artifactId>
   <packaging>war</packaging>
+  <properties>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+  </properties>
   <version>1.0</version>
   <name>crud-app Maven Webapp</name>
   <url>http://maven.apache.org</url>
@@ -20,7 +24,7 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
-      <version>6.0.0</version>
+      <version>5.3.24</version>
     </dependency>
 
     <dependency>
@@ -54,10 +58,17 @@
       <version>0.9.5.4</version>
     </dependency>
 
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.24</version>
+      <scope>provided</scope>
+    </dependency>
 
   </dependencies>
 
   <build>
     <finalName>crud-app</finalName>
   </build>
+
 </project>

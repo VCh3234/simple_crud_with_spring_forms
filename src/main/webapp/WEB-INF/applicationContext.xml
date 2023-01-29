@@ -21,8 +21,7 @@
     <mvc:annotation-driven/>
 
     <!--бин для ссылки на наши view-->
-    <bean
-            class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/view/"/>
         <property name="suffix" value=".jsp"/>
     </bean>

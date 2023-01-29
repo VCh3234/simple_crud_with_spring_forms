@@ -6,7 +6,12 @@
 
   <display-name>CRUD application</display-name>
 
-  <absolute-ordering />
+  <absolute-ordering/>
+
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>/WEB-INF/applicationContext.xml</param-value>
+  </context-param>
 
   <servlet>
     <servlet-name>dispatcher</servlet-name>
