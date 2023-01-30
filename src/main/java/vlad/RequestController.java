@@ -3,9 +3,7 @@ package vlad;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import vlad.data_access_objects.entities.VehicleEntity;
 import vlad.data_access_objects.services.CRUDService;
 
@@ -25,13 +23,26 @@ public class RequestController {
     @GetMapping("/get-form")
     private String sendForm(Model model) {
         VehicleEntity vehicle = new VehicleEntity();
-        model.addAttribute("newVehicle", vehicle);
+        model.addAttribute("vehicle", vehicle);
         return "vehicle_form";
     }
 
-    @PostMapping("/add-new-vehicle")
+    @PostMapping("/save-vehicle")
     private String addNewVehicle(@ModelAttribute("newVehicle") VehicleEntity vehicle) {
-        service.add(vehicle);
+        service.save(vehicle);
+        return "redirect:/get-all-vehicles";
+    }
+
+    @GetMapping("/update-vehicle")
+    private String sendFormForUpdateVehicle(@RequestParam("vehicleId") long id, Model model) {
+        VehicleEntity vehicle = service.getById(id);
+        model.addAttribute("vehicle", vehicle);
+        return "vehicle_form";
+    }
+
+    @GetMapping("/delete-vehicle")
+    private String deleteVehicle(@RequestParam("vehicleId") long id) {
+        service.delete(id);
         return "redirect:/get-all-vehicles";
     }
 

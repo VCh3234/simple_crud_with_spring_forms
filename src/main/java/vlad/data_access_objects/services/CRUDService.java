@@ -5,10 +5,10 @@ import java.util.List;
 public interface CRUDService<T> {
     List<T> getAll();
 
-    void delete(T vehicle);
+    void delete(long id);
 
-    void add(T vehicle);
+    void save(T vehicle);
 
-    void update(T vehicle);
+    T getById(long id);
 }
 

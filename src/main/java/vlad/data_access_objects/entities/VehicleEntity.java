@@ -17,7 +17,7 @@ public class VehicleEntity {
     private long id;
     @Basic
     @Column(name = "reserve")
-    private int reserve = 100;
+    private int reserve;
     @Basic
     @Column(name = "coordinate_x")
     private float coordinateX;
@@ -35,5 +35,5 @@ public class VehicleEntity {
     private int status;
     @Basic
     @Column(name = "purchase_date")
-    private LocalDate purchaseDate = LocalDate.now();
+    private LocalDate purchaseDate;
 }

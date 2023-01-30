@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -43,9 +44,20 @@
         <th>color</th>
         <th>status</th>
         <th>purchase date</th>
+        <th>actions</th>
     </tr>
     <c:forEach var="item" items="${vehicleList}">
+
+        <c:url var="updateButton" value="/update-vehicle">
+            <c:param name="vehicleId" value="${item.id}"/>
+        </c:url>
+
+        <c:url var="deleteButton" value="/delete-vehicle">
+            <c:param name="vehicleId" value="${item.id}"/>
+        </c:url>
+
         <tr>
+
             <td>${item.id}</td>
             <td>${item.coordinateX}, ${item.coordinateY}</td>
             <td>${item.reserve}</td>
@@ -53,6 +65,11 @@
             <td>${item.color}</td>
             <td>${item.status}</td>
             <td>${item.purchaseDate}</td>
+            <td>
+                <input value="Update" type="button" onclick="window.location.href='${updateButton}'">
+                <input value="Delete" type="button" onclick="window.location.href='${deleteButton}'">
+            </td>
+
         </tr>
     </c:forEach>
 

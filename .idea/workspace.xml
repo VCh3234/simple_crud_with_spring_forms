@@ -9,14 +9,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f97c4494-faea-403d-a52d-8d95af95c06d" name="Changes" comment="add service layer">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/vehicle_form.jsp" afterDir="false" />
+    <list default="true" id="f97c4494-faea-403d-a52d-8d95af95c06d" name="Changes" comment="complete addNewVehicle() method">
+      <change afterPath="$PROJECT_DIR$/src/main/java/vlad/data_access_objects/aop/SimpleAOP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vlad/RequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/RequestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vlad/data_access_objects/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/data_access_objects/dao/DAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vlad/data_access_objects/dao/VehicleDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/data_access_objects/dao/VehicleDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vlad/data_access_objects/entities/VehicleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/data_access_objects/entities/VehicleEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vlad/data_access_objects/services/CRUDService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/data_access_objects/services/CRUDService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vlad/data_access_objects/services/CRUDVehicleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/data_access_objects/services/CRUDVehicleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/all_vehicles.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/all_vehicles.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/all_vehicles.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/vehicle_form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/vehicle_form.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +33,9 @@
       <list>
         <option value="HTML File" />
         <option value="com.haulmont.jpb.JpaRepository" />
-        <option value="Class" />
         <option value="Interface" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -60,8 +65,9 @@
   <component name="ProjectId" id="2KuMoQ8ctxngTOGuNY65DN2jyXB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
@@ -241,6 +247,7 @@
       <workItem from="1674978329991" duration="8423000" />
       <workItem from="1674987051480" duration="39000" />
       <workItem from="1674987115550" duration="8031000" />
+      <workItem from="1675066742553" duration="9967000" />
     </task>
     <task id="LOCAL-00001" summary="configuration">
       <created>1674908641939</created>
@@ -263,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674999903128</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="complete addNewVehicle() method">
+      <created>1675066834772</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675066834772</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +298,8 @@
     <MESSAGE value="configuration" />
     <MESSAGE value="complete &quot;/get&quot; request and getAll() method" />
     <MESSAGE value="add service layer" />
-    <option name="LAST_COMMIT_MESSAGE" value="add service layer" />
+    <MESSAGE value="complete addNewVehicle() method" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete addNewVehicle() method" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

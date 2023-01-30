@@ -21,18 +21,19 @@ public class CRUDVehicleService implements CRUDService<VehicleEntity> {
 
     @Transactional
     @Override
-    public void delete(VehicleEntity vehicle) {
-
+    public void delete(long id) {
+        dao.delete(id);
     }
     @Transactional
     @Override
-    public void add(VehicleEntity vehicle) {
-        dao.add(vehicle);
+    public void save(VehicleEntity vehicle) {
+        dao.save(vehicle);
     }
 
-    @Transactional
     @Override
-    public void update(VehicleEntity vehicle) {
-
+    @Transactional
+    public VehicleEntity getById(long id) {
+        VehicleEntity result = dao.getById(id);
+        return result;
     }
 }

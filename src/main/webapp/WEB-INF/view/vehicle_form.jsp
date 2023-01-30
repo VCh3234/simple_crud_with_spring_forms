@@ -6,7 +6,11 @@
     <title>New vehicle</title>
 </head>
 <body>
-<form:form action="add-new-vehicle" method="post" modelAttribute="newVehicle">
+<form:form action="save-vehicle" method="post" modelAttribute="vehicle">
+
+    <form:hidden path="id"/>
+    <form:hidden path="reserve"/>
+
     Type: <form:input path="type"/>
     <br>
     Status: <form:input path="status"/>
