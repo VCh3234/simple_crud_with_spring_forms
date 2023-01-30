@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.time.LocalDate;
 
 @Data
 @Entity
@@ -12,10 +13,11 @@ public class VehicleEntity {
     @Id
     @Basic
     @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @Basic
     @Column(name = "reserve")
-    private int reserve;
+    private int reserve = 100;
     @Basic
     @Column(name = "coordinate_x")
     private float coordinateX;
@@ -33,5 +35,5 @@ public class VehicleEntity {
     private int status;
     @Basic
     @Column(name = "purchase_date")
-    private Date purchaseDate;
+    private LocalDate purchaseDate = LocalDate.now();
 }

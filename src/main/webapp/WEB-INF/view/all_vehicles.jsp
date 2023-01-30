@@ -57,6 +57,7 @@
     </c:forEach>
 
 </table>
-
+<br>
+<input type="button" value="Add" onclick="window.location.href='get-form'">
 </body>
 </html>

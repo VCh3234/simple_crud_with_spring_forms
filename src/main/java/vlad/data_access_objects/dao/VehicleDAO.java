@@ -15,7 +15,7 @@ public class VehicleDAO implements DAO<VehicleEntity> {
     @Autowired
     private SessionFactory sessionFactory;
 
-    @Transactional
+
     public List<VehicleEntity> getAllEntities() {
         Session session = sessionFactory.getCurrentSession();
         List<VehicleEntity> result = session.createQuery("from VehicleEntity", VehicleEntity.class).getResultList();
@@ -27,7 +27,8 @@ public class VehicleDAO implements DAO<VehicleEntity> {
     }
 
     public void add(VehicleEntity vehicle) {
-
+        Session session = sessionFactory.getCurrentSession();
+        session.save(vehicle);
     }
 
     public void update(VehicleEntity vehicle) {
